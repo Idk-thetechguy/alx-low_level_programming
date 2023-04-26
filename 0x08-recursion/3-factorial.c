@@ -1,31 +1,19 @@
 #include <stdio.h>
 
 /**
- * factorial - calculates the factorial of a given number
- * @n: the number for which factorial is to be calculated
- *
- * Return: the factorial of n, or -1 if n is lower than 0
- */
+* factorial - returns the factorial of a given number
+* @n: integer
+* Return: On success, returns the factorial of the given number.
+* On error, returns -1 and sets errno appropriately.
+*/
 int factorial(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	else if (n == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		int result = 1;
-		int i;
 
-		for (i = 1; i <= n; i++)
+if (n < 0)
+return (-1);
 
-		{
-			result *= i;
-		}
-		return (result);
-	}
+if (n == 0)
+return (1);
+
+return (n * factorial(n - 1));
 }
