@@ -1,4 +1,5 @@
-#include <stdh>
+#include <stdio.h>
+
 
 /**
  * wildcmp - Compares two strings and returns 1 if they can be considered
