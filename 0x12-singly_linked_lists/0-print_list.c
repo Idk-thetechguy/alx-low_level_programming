@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -63,4 +64,4 @@ next = current->next;
 free(current);
 current = next;
 }
-}}
+}
