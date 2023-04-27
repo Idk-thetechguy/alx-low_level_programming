@@ -1,28 +1,14 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - Entry point of the program
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+* main - prints the program's own name
+* @argc: argument count
+* @argv: array of pointers to strings
+*
+* Return: 0 on success
+*/
+int main(int argc, char *argv[])
 {
-	char *progName = __FILE__; /* Stores the name of the program */
-	char *progNameWithoutPath; /* Stores the program name without the path */
-	char *temp; /* Temporary variable to store substrings */
-
-	/* Extract the program name without the path */
-	temp = progName;
-	while (*progName != '\0')
-	{
-	if (*progName == '/')
-		temp = progName + 1;
-	progName++;
-	}
-	progNameWithoutPath = temp;
-
-	printf("%s\n", progNameWithoutPath); /* Print the program name without path */
-
-	return (0);
+printf("%s\n", argv[0]);
+return (0);
 }
