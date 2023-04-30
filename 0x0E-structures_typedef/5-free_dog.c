@@ -1,27 +1,16 @@
+#include <stdlib.h>
 #include "dog.h"
-
 /**
- * free_dog - Frees memory allocated for a dog_t structure
- * @d: Pointer to a dog_t structure to be freed
- *
- * Description: This function takes a pointer to a dog_t structure and frees
- * the memory allocated for the structure, including the memory allocated for
- * the name and owner fields of the structure.
- */
+* free_dog - frees memory for a struct dog
+*
+* @d: struct dog to free
+*/
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
-	{
-		if (d->name != NULL)
-		{
-			free(d->name);
-		}
-
-		if (d->owner != NULL)
-		{
-			free(d->owner);
-		}
-
-		free(d);
-	}
+if (d)
+{
+free(d->name);
+free(d->owner);
+free(d);
+}
 }
