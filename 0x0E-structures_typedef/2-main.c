@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include "dog.h"
-
-void print_dog(struct dog *d)
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
+int main(void)
 {
-	printf("Name: %s\n", d->name);
-	printf("Age: %.1f\n", d->age);
-	printf("Owner: %s\n", d->owner);
+struct dog my_dog;
+my_dog.name = "Poppy";
+my_dog.age = 3.5;
+my_dog.owner = "Bob";
+print_dog(&my_dog);
+return (0);
 }
