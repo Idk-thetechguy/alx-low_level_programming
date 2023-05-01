@@ -4,7 +4,7 @@
 *
 * Return: Always returns 0 to indicate successful execution.
 */
-nt main(void)
+int main(void)
 {
 int i;
 for (i = 48; i < 58; i++)
