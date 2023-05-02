@@ -1,29 +1,17 @@
-section .data
-message db 'Hello, Holberton',0Ah ; message to print
-len equ $-message ; length of message
+global   main
 
-section .text
-global main
-extern printf
+          extern    printf
 
 main:
-; initialize loop counter to 0
-xor ecx, ecx
 
-loop:
-; print message
-mov edi, message
-xor eax, eax
-call printf
+          mov   edi, format
 
-; increment loop counter
-inc ecx
+          xor   eax, eax
 
-; check if loop counter is less than 10
-cmp ecx, 10
-jl loop
+          call  printf
 
-; exit program
-xor eax, eax
-ret
+          mov   eax, 0
 
+          ret
+
+format: db `Hello, alx_africa\n`,0
