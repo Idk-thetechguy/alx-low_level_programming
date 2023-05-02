@@ -1,13 +1,19 @@
-section .data
-    format db 'Hello, Holberton', 10, 0
+global   main
 
-section .text
-    global main
-    extern printf
+          extern    printf
 
 main:
-    push format
-    call printf
-    add esp, 4
-    xor eax, eax
-    ret
+
+          ; Set up the format string
+          mov   edi, format
+
+          ; Set the return value to zero
+          xor   eax, eax
+
+          ; Call printf with the format string
+          call  printf
+
+          ; Return from main
+          ret
+
+format: db `Hello, Holberton\n`,0
