@@ -1,11 +1,12 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#define ERR_MSG "Error: invalid input"
+#define ERR_MSG "Error"
 /**
-* is_digit - checks if a string contains only digits
-* @s: string to be evaluated
+* is_digit - Check if a string contains a character that is not a digit
+* @s: The sequence of characters to be assessed
 *
-* Return: 1 if all characters are digits, 0 otherwise
+* Return: 1 if a digit is found, 0 otherwise
 */
 int is_digit(char *s)
 {
@@ -19,10 +20,10 @@ i++;
 return (1);
 }
 /**
-* _strlen - returns the length of a string
-* @s: string to evaluate
+* _strlen - function determines and outputs the length of a given string
+* @s: Code to inspect
 *
-* Return: the length of the string
+* Return: the string's length
 */
 int _strlen(char *s)
 {
@@ -34,28 +35,27 @@ i++;
 return (i);
 }
 /**
-* errors - handles errors for main
+* errors - Manages or addresses errors pertaining to the main function
 */
 void errors(void)
 {
-printf("%s\n", ERR_MSG);
+printf("Error\n");
 exit(98);
 }
 /**
-* main - multiplies two positive numbers
-* @argc: number of arguments
-* @argv: array of arguments
+* main - Multiplies two positive numbers
+* @argc: Arguments passed
+* @argv: Argument array
 *
-* Return: always 0 (Success)
+* Return: Always 1 (Success)
 */
 int main(int argc, char *argv[])
 {
 char *s1, *s2;
 int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
-if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
+s1 = argv[1], s2 = argv[2];
+if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 errors();
-s1 = argv[1];
-s2 = argv[2];
 len1 = _strlen(s1);
 len2 = _strlen(s2);
 len = len1 + len2 + 1;
@@ -83,11 +83,11 @@ for (i = 0; i < len - 1; i++)
 if (result[i])
 a = 1;
 if (a)
-putchar(result[i] + '0');
+_putchar(result[i] + '0');
 }
 if (!a)
-putchar('0');
-putchar('\n');
+_putchar('0');
+_putchar('\n');
 free(result);
 return (0);
 }
