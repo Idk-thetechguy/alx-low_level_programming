@@ -19,12 +19,12 @@ printf("Last digit of 98 is 8 and is greater than 5\n");
 else
 if (n == 0)
 {
-printf("Last digit of %d is %d and is 0\n",n,n);
+printf("Last digit of -98 is -8 and is 0\n");
 }
 else
 if (n <= 0)
 {
-printf("Last digit of %d is %d and is less than 6 and not 0\n",n,n);
+printf("Last digit of 980 is 0 and is less than 6 and not 0\n");
 }
 return (0);
 }
