@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
 * print_binary -function outputs binary representation of a decimal value
 * @n: number to print in binary
