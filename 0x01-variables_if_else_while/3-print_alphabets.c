@@ -1,16 +1,26 @@
 #include <stdio.h>
 /**
-* main - Prints the English alphabet in lowercase.
+* main - Entry point
+* prints a-z in lower & upper case letters
 *
-* Return: Always 0 (Success)
+* Return: 0 on success
 */
 int main(void)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int i;
-for (i = 0; i < 52; i++)
+char i = 'a';
+char j = 'A';
+char z = 'z';
+char Z = 'Z';
+
+while (i <= z)
 {
-putchar(alp[i]);
+putchar(i);
+i++;
+}
+while (j <= Z)
+{
+putchar(j);
+j++;
 }
 putchar('\n');
 return (0);
