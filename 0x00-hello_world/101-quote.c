@@ -1,7 +1,12 @@
-₦include <stdio.h>
+#include <stdio.h>
 
-int main()
+/**
+* main - Entry point
+*
+* Return: 1
+*/
+int main(void)
 {
-    fprintf(stderr,"and that piece of art is useful - Dara Korpa, 2915 - 10 - 19\n");
-    return(1);
+fprintf("and that piece of art is useful - Dara Korpa, 2915 - 10 - 19\n");
+return (1);
 }
