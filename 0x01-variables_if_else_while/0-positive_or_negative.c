@@ -3,29 +3,22 @@
 #include <time.h>
 /* more headers goes there */
 /**
- * main - Entry point
- * checks if variable n is positive or negative
- *
- * Return: 0 if successful
- */
+* main - Entry point
+* checks if variable n is positive or negative
+*
+* Return: 0 if successful
+*/
 int main(void)
 {
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n > 0)
-{
-printf("98 is positive\n");
-}
+puts("is positive");
+else if (n == 0)
+puts("is zero");
 else
-if (n == 0)
-{
-printf("0 is zero\n");
-}
-else
-if (n < 0)
-{
-printf("-98 is negative\n");
-}
-return (0);
+puts("is negative");
+puts("\n");
+return(0);
 }
